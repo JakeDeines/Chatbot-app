@@ -7,6 +7,19 @@ const openai = new OpenAI({
 
 function Chatbot() {
     //Component logic will go here
-}
+    const [userInput, setUserInput] = useState('');
+    const [chatHistory, setChatHistory] = useState([]);
+
+    async function sendMessage() {
+        // code to send messages to the chatbot will go here
+
+    }
+}//jsx for rendering the chat interface will go here
+
+return (
+    <div>
+        {/* jsx for chat interface */}
+    </div>
+)
 
 export default Chatbot;
