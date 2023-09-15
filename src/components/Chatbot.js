@@ -18,8 +18,23 @@ function Chatbot() {
 
 return (
     <div>
-        {/* jsx for chat interface */}
+      <div id="chat">
+        {chatHistory.map((chat, index) => (
+          <div key={index}>
+            <strong>{chat.sender}:</strong> {chat.message}
+          </div>
+        ))}
+      </div>
+      <div>
+        <input
+          type="text"
+          value={userInput}
+          onChange={(e) => setUserInput(e.target.value)}
+          placeholder="Type your message..."
+        />
+        <button onClick={sendMessage}>Send</button>
+      </div>
     </div>
-)
+  );
 
 export default Chatbot;
